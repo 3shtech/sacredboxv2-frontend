@@ -2,26 +2,74 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer base {
+  html {
+    font-family: "Raleway", sans-serif;
   }
 }
+@layer components {
+  nav {
+    @apply w-screen px-1 py-2;
+  }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  .form-control {
+    @apply flex justify-center w-full items-center;
+  }
+
+  /* Input,
+  Select,
+  textarea {
+    @apply placeholder-gray-500 w-full border-2 border-slate-700 rounded-md px-4 py-2 my-3 resize-none;
+  } */
+
+  .input {
+    @apply w-3/4 border-black py-1;
+  }
+
+  #primary-btn {
+    @apply bg-[#283593] text-white  px-8 py-5 rounded-xl;
+  }
+  #secondary-btn {
+    @apply px-5 py-2 text-black bg-[#283593] hover:bg-black hover:text-white rounded-xl;
+  }
+  /* home page section title */
+  h2 {
+    @apply font-bold text-xl md:text-2xl;
+  }
+  /* home page section sub title */
+  h3 {
+    @apply font-semibold text-sm md:text-lg p-5;
+  }
+  p {
+    @apply font-normal text-gray-600;
+  }
+  p > h2 {
+    @apply text-black;
+  }
+
+  .provider-profile {
+    @apply flex flex-col  w-2/5 rounded-md shadow-lg xs:w-11/12 sm:w-11/12  xl:w-11/12 xl:flex-row bg-white m-5 px-5;
+  }
+  .provider-content {
+    @apply flex flex-col justify-center items-center px-5 xl:items-stretch xl:bg-red-300 xl:m-10;
+  }
+  .form-control {
+    @apply flex flex-col items-center justify-center w-full px-10 py-1 lg:w-3/4;
+  }
+  .form-control input {
+    @apply border-none;
+  }
+
+  /* SearchFilter in Modal */
+  #title {
+    @apply font-semibold;
+  }
+
+  .searchForm {
+    @apply flex flex-col gap-2;
+  }
+
+  .datePicker {
+    @apply px-3 py-0;
+  }
 }

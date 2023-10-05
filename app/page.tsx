@@ -1,7 +1,9 @@
+import HeroSection from "./components/Home/hero";
+
 export default function Home() {
   return (
     <main className="w-full">
-      <h2> Hello from home!</h2>
+      <HeroSection />
     </main>
   );
 }

@@ -1,6 +1,4 @@
 import Link from "next/link";
-import { AiOutlineMenu } from "react-icons/ai";
-
 import Image from "next/image";
 import { PrimaryMenu, SecondaryMenu } from ".";
 
