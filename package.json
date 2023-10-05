@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ant-design/icons": "^5.2.6",
     "@next/font": "^13.5.4",
     "antd": "^5.9.4",
     "next": "13.5.4",
