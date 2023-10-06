@@ -3,8 +3,13 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
+import StyledComponentsRegistry from "./lib/AntdRegistry";
+import { Merriweather_Sans } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const merriWeather_Sans = Merriweather_Sans({
+  subsets: ["latin"],
+  variable: "--font-merriWeather_Sans",
+});
 
 export const metadata: Metadata = {
   title: "SacredBox",
@@ -18,9 +23,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${merriWeather_Sans.variable} text-black`}>
         <Navbar />
-        {children}
+        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
         <Footer />
       </body>
     </html>
