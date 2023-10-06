@@ -12,7 +12,7 @@ export default function SearchForm() {
       <h2 className="font-semibold"> Meet your spiritual helpers</h2>
       <form
         method="post"
-        className="px-5 w-full flex flex-col justify-center items-center gap-4 mt-10"
+        className="px-5 w-3/4 flex flex-col justify-center items-center gap-4 mt-10"
         action="/searchResults"
       >
         <Input placeholder="Keyword" className="input" />
@@ -20,7 +20,7 @@ export default function SearchForm() {
 
         <Select
           defaultValue="Select Category"
-          className="w-3/4 border-black"
+          className=" border-black input"
           bordered={true}
           onChange={handleSelectCategory}
           options={[
