@@ -14,12 +14,11 @@ export default function SearchResults() {
   return (
     <main className="flex flex-row gap-10">
       <Layout>
-        <Sider className="w-3/4 bg-red-100">
+        <Sider width={300} theme="light" className="px-5 py-3">
           <SearchFilter />
         </Sider>
         <Content>
           {" "}
-          con
           {/*TODO: add filter  */}
           <section className=" w-11/12 lg:w-5/6 m-auto  mb-10  mt-10">
             {/* Search filter */}
