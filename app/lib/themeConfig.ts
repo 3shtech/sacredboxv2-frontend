@@ -4,11 +4,16 @@ import type { ThemeConfig } from "antd";
 const theme: ThemeConfig = {
   components: {
     Button: {
-      colorPrimary: "#283593",
-      algorithm: true,
+      primaryColor: "#283593",
+    },
+    Input: {
+      colorBgContainer: "#283593",
+      hoverBorderColor: "#283593",
+      activeBorderColor: "#283593",
+      activeShadow: "#ffffff",
     },
     Layout: {
-      siderBg: "blue",
+      siderBg: "#f6ffed",
     },
   },
 };
