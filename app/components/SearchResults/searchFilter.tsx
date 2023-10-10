@@ -10,6 +10,7 @@ import {
   Input,
   Select,
   Slider,
+  Form,
 } from "antd";
 import { SliderMarks } from "antd/es/slider";
 
@@ -24,28 +25,28 @@ export default function SearchFilter({ open }: any) {
   };
   return (
     <ConfigProvider theme={theme}>
-      <main>
-        <form method="post" className="flex flex-col gap-3">
-          <div className="searchForm">
-            <label htmlFor="Date" id="title">
-              Date
-            </label>
-            <DatePicker onChange={onChange} className="input" />
-          </div>
-          <div className="searchForm">
-            <label htmlFor="available"> Available On</label>
-            <DatePicker onChange={onChange} className="input" />
-          </div>
-          <div className="searchForm">
-            <label htmlFor="available"> Keyword</label>
-            <Input name="keyword" className="input" />
-          </div>
-          <div className="searchForm">
-            <label htmlFor="available"> Location</label>
-            <Input name="location" className="input" />
-          </div>
-          <div className="searchForm">
-            <label htmlFor="available"> Category </label>
+      <main className="w-full">
+        <Form method="post" layout="vertical" className="w-full">
+          <Form.Item<filterFormFieldType> label="Date" name="date">
+            <DatePicker onChange={onChange} style={{ width: "100%" }} />
+          </Form.Item>
+
+          <Form.Item<filterFormFieldType>
+            label="Available on"
+            name="availability"
+          >
+            <DatePicker onChange={onChange} style={{ width: "100%" }} />
+          </Form.Item>
+
+          <Form.Item<filterFormFieldType> label="Keyword" name="keyword">
+            <Input />
+          </Form.Item>
+
+          <Form.Item<filterFormFieldType> label="Address" name="address">
+            <Input />
+          </Form.Item>
+
+          <Form.Item<filterFormFieldType> label="Category" name="keyword">
             <Select
               defaultValue="Select Category"
               options={[
@@ -53,17 +54,21 @@ export default function SearchFilter({ open }: any) {
                 { value: "Healer", label: "Healer" },
               ]}
             ></Select>
-          </div>
-          <div className="searchForm">
-            <label htmlFor="available"> Filter by Radius</label>
+          </Form.Item>
+
+          <Form.Item<filterFormFieldType>
+            label="Filter by Radius"
+            name="filterRadius"
+          >
             <Slider marks={marks} />
-          </div>
-          <div className="searchForm">
-            <Button type="primary" className="flex justify-center items-center">
+          </Form.Item>
+
+          <Form.Item<filterFormFieldType>>
+            <Button type="primary" block>
               Apply
             </Button>
-          </div>
-        </form>
+          </Form.Item>
+        </Form>
       </main>
     </ConfigProvider>
   );

@@ -2,18 +2,31 @@
 import type { ThemeConfig } from "antd";
 
 const theme: ThemeConfig = {
+  token: {
+    colorPrimaryBorder: "#283593",
+    colorPrimary: "#283593",
+    colorPrimaryHover: "#3d4eca",
+    colorBgBase: "white",
+  },
   components: {
     Button: {
-      primaryColor: "#283593",
+      // colorPrimary: "#283593",
+      // colorPrimaryHover: "#3d4eca",
+      borderRadius: 10,
     },
     Input: {
-      colorBgContainer: "#283593",
       hoverBorderColor: "#283593",
       activeBorderColor: "#283593",
       activeShadow: "#ffffff",
     },
+    Slider: {
+      handleActiveColor: "#283593",
+      trackBg: "#283593",
+      trackHoverBg: "#283593",
+    },
+    DatePicker: {},
     Layout: {
-      siderBg: "#f6ffed",
+      siderBg: "#ffffff",
     },
   },
 };
