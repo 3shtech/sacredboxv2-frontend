@@ -6,12 +6,10 @@ const theme: ThemeConfig = {
     colorPrimaryBorder: "#283593",
     colorPrimary: "#283593",
     colorPrimaryHover: "#3d4eca",
-    colorBgBase: "white",
+    colorBgContainer: "#ffffff",
   },
   components: {
     Button: {
-      // colorPrimary: "#283593",
-      // colorPrimaryHover: "#3d4eca",
       borderRadius: 10,
     },
     Input: {

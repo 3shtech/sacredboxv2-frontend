@@ -15,7 +15,7 @@ export default function SearchForm() {
           method="post"
           // className="px-5 w-3/4 flex flex-col justify-center items-center gap-4 mt-10"
           className="w-3/4"
-          action="/searchResults"
+          action="/searchProviders"
           layout="horizontal"
           autoComplete="on"
         >
@@ -46,7 +46,7 @@ export default function SearchForm() {
             />
           </Form.Item>
 
-          <Button type="primary" href="/searchResults" block>
+          <Button type="primary" href="/searchProviders" block>
             {" "}
             Search
           </Button>

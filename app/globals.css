@@ -4,7 +4,7 @@
 
 @layer base {
   html {
-    font-family: "Raleway", sans-serif;
+    font-family: "Merriweather_Sans", sans-serif;
   }
 }
 @layer components {
@@ -16,14 +16,11 @@
     @apply flex justify-center w-full items-center;
   }
 
-  /* Input,
-  Select,
-  textarea {
-    @apply placeholder-gray-500 w-full border-2 border-slate-700 rounded-md px-4 py-2 my-3 resize-none;
-  } */
-
+  .sidebar {
+    @apply px-5 py-2;
+  }
   .input {
-    @apply w-3/4 border-black py-1;
+    @apply w-full py-1;
   }
 
   #primary-btn {

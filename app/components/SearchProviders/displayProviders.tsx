@@ -2,22 +2,13 @@
 import getAllProviders from "@/app/lib/getAllProviders";
 import Link from "next/link";
 
-export default async function ShowSearchResults() {
-  const providersData: Promise<provider[]> = getAllProviders();
+export default async function DisplayProviders() {
+  const providersData: Promise<Provider[]> = getAllProviders();
   const providers = await providersData;
-  console.log(providers);
-  const data = (
+
+  return (
     <section>
-      {/* {providers.map((provider) => {
-        return (
-          <>
-            <Link key={provider.id} href={`${provider.name}`} prefetch={true}>
-              <h2> {provider.name} </h2>
-            </Link>
-          </>
-        );
-      })} */}
-      {providers.map((provider: provider) => (
+      {providers.map((provider) => (
         <div
           key={provider.id}
           className="shadow-md  mt-10 mb-10 pb-5 bg-slate-100"
@@ -54,7 +45,7 @@ export default async function ShowSearchResults() {
 
             {/* button */}
             <div className="hidden lg:block m-auto w-1/2">
-              <Link id="primary-btn" href={`/searchResults/${provider.id}`}>
+              <Link id="primary-btn" href={`/searchProviders/${provider.id}`}>
                 View Profile
               </Link>
             </div>
@@ -70,5 +61,4 @@ export default async function ShowSearchResults() {
       ))}
     </section>
   );
-  return <div>{data}</div>;
 }
