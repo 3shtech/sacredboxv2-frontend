@@ -22,7 +22,7 @@ type Location = {
   country: string;
 };
 
-type provider = {
+type Provider = {
   id: string;
   profilePicture: string;
   name: string;
