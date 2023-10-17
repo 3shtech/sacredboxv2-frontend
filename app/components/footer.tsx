@@ -21,7 +21,7 @@ const Footer = () => {
           height={10}
           className="mix-blend-multiply object-fit-contain "
         />
-        <div className="flex gap-5 px-5 py-3">
+        <div className="flex flex-wrap gap-5 px-5 py-3">
           <Button
             shape="circle"
             icon={<InstagramOutlined />}

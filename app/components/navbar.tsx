@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { PrimaryMenu, SecondaryMenu } from ".";
+import NavMenu from "./Home/navMenu";
 
 export default function Navbar() {
   return (
@@ -15,15 +16,19 @@ export default function Navbar() {
           className="object-contain"
         />
       </Link>
-
+      {/* <div className="hidden md:flex"> */}
       <PrimaryMenu />
 
+      {/* </div> */}
+
       {/* Login & Register */}
-      <SecondaryMenu />
+      {/* <div className="hidden md:flex">
+        <SecondaryMenu />
+      </div> */}
 
       {/* small screens */}
       {/* <button className="md:hidden mx-3 cursor-pointer  ">
-        <AiOutlineMenu className="w-8 h-8" />
+        <NavMenu />
       </button> */}
     </nav>
   );
